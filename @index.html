@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="@style.css">
+    <script src="@script.js"></script>
+    <script src="@process.js"></script>
+    <title>makeSomething</title>
+</head>
+<body class="page">
+    <div class="header">
+        <div class="name">
+            <h1 class="name_text">&#60MAKE&#62Something</h1>
+        </div>
+    </div>
+    <div class="nav_bar">
+        <div class="font">
+            <button class="font_text" onclick="fontButton()">Font
+        </div>
+        <div class="underline">
+            <button class="underline_text" onclick="underlineButton()">Underline
+        </div>
+        <div class="title">
+            <button class="title_text" onclick="titleButton()">Title
+        </div>
+        <div class="heading">
+            <button class="heading_text" onclick="headingButton()">Heading
+        </div>
+        <div class="bold">
+            <button class="bold_text" onclick="boldButton()">Bold
+        </div>
+        <div class="italics">
+            <button class="italics_text" onclick="italicsButton()">Italics
+        </div>
+    </div>
+    <div class="sider">
+        <div class="new_page">
+            <button class="new_page_text" onclick="newPageButton()">New Page
+        </div>
+        <div class="to_do">
+            <button class="to_do_text" onclick="toDoButton()">To Do
+        </div>
+    </div>
+    <div class="doc_container">
+        <form id="document" class="document" onsubmit="return false;">
+            <textarea rows="10" cols="10" name="text"></textarea>
+            <input type="submit" value="Save Document">
+        </form>
+    </div>
+    <div class="recents_box">
+        <p class="recents_text">Recents:</p>
+    </div>
+</body>
+</html>
