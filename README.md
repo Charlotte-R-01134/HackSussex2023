@@ -20,3 +20,7 @@ pip install flask
 ```
 pip install python-dotenv
 ```
+
+```
+pip install flask-bootstrap flask-sqlalchemy flask-login flask-wtf flask-moment
+```
