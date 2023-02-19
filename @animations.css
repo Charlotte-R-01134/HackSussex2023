@@ -1,0 +1,17 @@
+@keyframes appear {
+    from {
+        height: 0vw;
+    }
+    to {
+        height: 41vw;
+    }
+}
+
+@keyframes disappear {
+    from {
+        height: 41vw;
+    }
+    to {
+        height: 0vw;
+    }
+}

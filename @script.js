@@ -19,11 +19,15 @@ function boldButton() {
 }
 
 function italicsButton() {
-    console.log("Italics button clicked");
+    let preText = document.getElementById("document").elements.namedItem("text_entry").value.substring(0, document.getElementById("document").elements.namedItem("text_entry").value.selectionStart-1);
+    let selectedText = document.getElementById("document").elements.namedItem("text_entry").value.substring(document.getElementById("document").elements.namedItem("text_entry").value.selectionStart, document.getElementById("document").elements.namedItem("text_entry").value.selectionEnd).italics();
+    let postText = document.getElementById("document").elements.namedItem("text_entry").value.substring(document.getElementById("document").elements.namedItem("text_entry").value.selectionEnd+1, document.getElementById("document").elements.namedItem("text_entry").value.length)
+    document.getElementById("text_entry").innerHTML = preText + selectedText + postText;
 }
 
 function newPageButton() {
     console.log("New page button clicked");
+    document.getElementById("doc_name_text").innerHTML = "Doc name: "+prompt("File name");
 }
 
 function toDoButton() {

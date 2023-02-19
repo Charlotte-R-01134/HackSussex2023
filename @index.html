@@ -5,14 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="@style.css">
+    <link rel="stylesheet" href="@animations.css">
     <script src="@script.js"></script>
     <script src="@process.js"></script>
     <title>makeSomething</title>
 </head>
-<body class="page">
+<body class="page" onload="">
     <div class="header">
         <div class="name">
             <h1 class="name_text">&#60MAKE&#62Something</h1>
+        </div>
+        <div class="doc_name">
+            <p id="doc_name_text" class="doc_name_text">Document: </p>
         </div>
     </div>
     <div class="nav_bar">
@@ -45,12 +49,20 @@
     </div>
     <div class="doc_container">
         <form id="document" class="document" onsubmit="return false;">
-            <textarea rows="10" cols="10" name="text"></textarea>
-            <input type="submit" value="Save Document">
+            <textarea rows="100" cols="174" name="text_entry" wrap="hard" class="text_entry" id="text_entry"></textarea>
+            <input type="submit" value="Save Document" class="save">
         </form>
     </div>
     <div class="recents_box">
         <p class="recents_text">Recents:</p>
+    </div>
+    <div class="headings_top" id="headings_top">
+        <button class="heading1">Heading 1</p>
+        <button class="heading2">Heading 2</p>
+        <button class="heading3">Heading 3</p>
+        <button class="heading4">Heading 4</p>
+        <button class="heading5">Heading 5</p>
+        <button class="heading6">Heading 6</p>
     </div>
 </body>
 </html>
