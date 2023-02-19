@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}&#60Make&#62 Something - New Note {% endblock %}
+{% block content %}
+
+<body>
+    {% block page_content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>{{ id.title }}</h1>
+        </div>
+        <div class="col-md-4 ms-auto me-auto">
+            {{ wtf.quick_form(form) }}
+        </div>
+    {% endblock %}
+</body>
+{% endblock %}
