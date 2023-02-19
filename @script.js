@@ -11,7 +11,10 @@ function titleButton() {
 }
 
 function headingButton() {
-    console.log("Heading button clicked");
+    document.getElementById("headings_top").style.display = "block";
+    setInterval(function() {
+        document.getElementById("headings_top").style.display = "none";
+    }, 4000)
 }
 
 function boldButton() {
@@ -27,9 +30,24 @@ function italicsButton() {
 
 function newPageButton() {
     console.log("New page button clicked");
-    document.getElementById("doc_name_text").innerHTML = "Doc name: "+prompt("File name");
+    let temp = data_template;
+    temp.name = prompt("File name: ");
+    temp.text = document.getElementById("text_entry").value;
+    files.push(temp)
 }
 
 function toDoButton() {
-    console.log("To do button clciked");
+    console.log("To do button clicked");
+}
+
+function recent1() {
+    getDocLoc("test")
+}
+
+function recent2() {
+    getDocLoc("Document")
+}
+
+function recent3() {
+    getDocLoc("How to view this")
 }

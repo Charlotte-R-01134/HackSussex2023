@@ -265,7 +265,7 @@
     background: none;
     border: none;
     width: 13vw;
-    height: 8vh;
+    height: 5vh;
     font-family: 'Comfortaa', Sans-serif;
 }
 
@@ -278,11 +278,11 @@
 }
 
 .save {
-    display: block;
+    display: hidden;
     position: fixed;
     margin-left: 17vw;
     margin-top: 70vh;
-    width: 8vw;
+    width: 14vw;
     height: 4vh;
     font-family: 'Comfortaa', Sans-serif;
 }
@@ -306,7 +306,7 @@
     position: fixed;
     border: 2px solid rgb(114, 199, 169);
     width: 13vw;
-    height: 41vh;
+    height: 43vh;
     margin-left: 57vw;
     margin-top: 9vh;
     border-radius: 0.5vw;
@@ -367,7 +367,7 @@
     text-align: center;
     border-radius: 0.5vw;
     margin-left: 1vw;
-    margin-top: 20vh;
+    margin-top: 22vh;
     background-color: #313338;
     color: rgb(114, 199, 169);
     font-size: 1vw;
@@ -382,7 +382,7 @@
     text-align: center;
     border-radius: 0.5vw;
     margin-left: 1vw;
-    margin-top: 27vh;
+    margin-top: 29vh;
     background-color: #313338;
     color: rgb(114, 199, 169);
     font-size: 1vw;
@@ -397,10 +397,68 @@
     text-align: center;
     border-radius: 0.5vw;
     margin-left: 1vw;
-    margin-top: 34vh;
+    margin-top: 36vh;
     background-color: #313338;
     color: rgb(114, 199, 169);
     font-size: 1vw;
+}
+
+.recent1 {
+    display: block;
+    position: fixed;
+    background: none;
+    min-width: 11vw;
+    height: 6vh;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    border-radius: 0.5vw;
+    border: 2px solid rgb(114, 199, 169);
+    color: rgb(114, 199, 169);
+    text-align: center;
+    background-color: #434343;
+}
+.recent2 {
+    display: block;
+    position: fixed;
+    background: none;
+    min-width: 11vw;
+    height: 6vh;
+    margin-left: 1vw;
+    margin-top: 8vh;
+    border-radius: 0.5vw;
+    border: 2px solid rgb(114, 199, 169);
+    color: rgb(114, 199, 169);
+    text-align: center;
+    background-color: #434343;
+}
+.recent3 {
+    display: block;
+    position: fixed;
+    background: none;
+    min-width: 11vw;
+    height: 6vh;
+    margin-left: 1vw;
+    margin-top: 15vh;
+    border-radius: 0.5vw;
+    border: 2px solid rgb(114, 199, 169);
+    color: rgb(114, 199, 169);
+    text-align: center;
+    background-color: #434343;
+}
+
+#temp_button {
+    display: block;
+    position: fixed;
+    background: none;
+    min-width: 11vw;
+    height: 6vh;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    border-radius: 0.5vw;
+    border: 2px solid rgb(114, 199, 169);
+    color: rgb(114, 199, 169);
+    text-align: center;
+    background-color: #434343;
 }
 
 #html {
