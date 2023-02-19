@@ -25,6 +25,8 @@
         border: 2px solid rgb(114, 199, 169);
         margin-top: 16px !important;
         margin-bottom: 16px !important;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     h1 {
@@ -43,8 +45,10 @@
     }
 
     a {
+        text-decoration: none;
         color: rgb(114, 199, 169);
     }
+
 </style>
 
 <div class="page">
@@ -52,9 +56,23 @@
     <div class="navbar navbar-dark bg-dark border-bottom sticky-top">
         <div class="navbar navbar-expand-lg navbar-dark bg-dark">
             {% if current_user.is_authenticated %}
-                <h1>&#60MAKE&#62 Something - @{{ current_user.username}}</h1>
+                <h1><a href="{{ url_for('main.index') }}">&#60MAKE&#62 Something</a> - <a href="{{ url_for('main.notes', username=current_user.username) }}">@{{ current_user.username}}</a></h1>
                 <a class="btn btn-default" href="{{ url_for('auth.change_password') }}">Change Password</a>
-                <a class="btn btn-default" href="{{ url_for('auth.logout') }}">Logout</a>
+                <a class="btn btn-default " href="{{ url_for('auth.logout') }}">Logout</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recent Notes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            {% for note in recent %}
+                                <li><a class="dropdown-item" href="{{ url_for('main.notes', username=current_user.username, note_id=note.id) }}">{{ note.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+                <a class="btn btn-default" href="{{ url_for('main.notes', username=current_user.username) }}">All Notes</a>
+                <a class="btn btn-default" href="{{ url_for('main.new_note', username=current_user.username) }}">New Note</a>
             {% else %}
                 <h1>&#60MAKE&#62 Something</h1>
                 <a class="btn btn-default" href="{{ url_for('auth.login') }}">Login</a>
@@ -79,4 +97,5 @@
 </html>
 
 {% block scripts %}
+{{ moment.include_moment() }}
 {% endblock %}

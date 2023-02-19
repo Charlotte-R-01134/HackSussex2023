@@ -7,10 +7,12 @@
     {% block page_content %}
     <div class="container">
         <div class="page-header">
-            <h1>{{ note.title }}</h1>
+            <h1>{{ note.title }}</h3>
+            <a href="{{ url_for('main.display', username=current_user.username, id=note.id) }}">Display</a>
         </div>
-        <div class="col-md-4 ms-auto me-auto">
-            {{ wtf.quick_form(form) }}
+            <div class="col-md-8 ms-auto me-auto">
+                {{ wtf.quick_form(form) }}
+            </div>
         </div>
     {% endblock %}
 </body>

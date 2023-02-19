@@ -1,0 +1,26 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title%} &#60Make&#62 Something - Notes {% endblock %}
+
+<body>
+        {% block page_content %}
+        <div class="container">
+                <div class="page-header">
+                    <h1>Notes</h1>
+                </div>
+
+                <!-- List all the notes alphabetically-->
+                {% for note in notes %}
+                    {% if note.content == None %}
+                        <a href="{{ url_for('main.get_note',  username=current_user.username, id=note.id) }}">
+                            <h3>{{ note.title }}</h3>
+                        </a>
+                    {% else %}
+                        <a href="{{ url_for('main.display', username=current_user.username, id=note.id) }}">
+                            <h3>{{ note.title }}</h3>
+                        </a>
+                    {% endif %}
+                {% endfor %}
+        </div>
+        {% endblock %}
+</body>

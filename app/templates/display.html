@@ -1,0 +1,17 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title%} &#60Make&#62 Something - Notes {% endblock %}
+
+<body>
+    {% block page_content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>{{ note.title }}</h1>
+            <a href="{{ url_for('main.get_note', username=current_user.username, id=note.id) }}">Edit</a>
+        </div>
+        {% autoescape false %}
+        <p>{{ note.content }}</p>
+        {% endautoescape %}
+    </div>
+    {% endblock %}
+</body>

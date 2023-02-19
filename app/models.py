@@ -34,6 +34,7 @@ class Notes(db.Model, UserMixin):
     title = db.Column(db.String(64), index=True)
     content = db.Column(db.String(10000))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    last_modified = db.Column(db.DateTime)
 
     def __init__(self, **kwargs):
         super(Notes, self).__init__(**kwargs)
