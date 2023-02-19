@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}&#60Make&#62 Something - {{ note.title }}{% endblock %}
+{% block content %}
+
+<body>
+    {% block page_content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>{{ note.title }}</h3>
+            <a href="{{ url_for('main.display', username=current_user.username, id=note.id) }}">Display</a>
+        </div>
+            <div class="col-md-8 ms-auto me-auto">
+                {{ wtf.quick_form(form) }}
+            </div>
+        </div>
+    {% endblock %}
+</body>
+{% endblock %}

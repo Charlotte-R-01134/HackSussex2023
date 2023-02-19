@@ -1,4 +1,6 @@
 {
     "name": "test",
-    "text": "rawr"
+    "text": "rawr",
+    "colour": "000",
+    "font_size": "1vw"
 }

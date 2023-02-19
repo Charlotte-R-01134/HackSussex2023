@@ -27,6 +27,20 @@ class User(db.Model, UserMixin):
 
     def __repr__(self):
         return '<User %r>' % self.username
+    
+class Notes(db.Model, UserMixin):
+    __tablename__ = 'notes'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(64), index=True)
+    content = db.Column(db.String(10000))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    last_modified = db.Column(db.DateTime)
+
+    def __init__(self, **kwargs):
+        super(Notes, self).__init__(**kwargs)
+
+    def __repr__(self):
+        return '<Notes %r>' % self.title
 
 class AnonymousUser(AnonymousUserMixin):
     pass
